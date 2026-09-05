@@ -8,6 +8,7 @@
     --ink: #151515;
     --paper: #f7f5f0;
     --accent: #d79b45;
+    --accent-readable: #80551e;
     --muted: #706b63;
     --white: #ffffff;
     --border: #e5e0d8;
@@ -77,7 +78,7 @@ textarea {
 ========================= */
 
 .eyebrow {
-    color: var(--accent);
+    color: var(--accent-readable);
 
     font-size: .75rem;
     font-weight: 800;
@@ -171,7 +172,7 @@ p {
 }
 
 .btn:focus-visible {
-    outline: 3px solid rgba(215, 155, 69, .35);
+    outline: 3px solid var(--accent-readable);
     outline-offset: 3px;
 }
 
@@ -374,6 +375,7 @@ nav {
     color: var(--white);
 
     background:
+        linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
         linear-gradient(135deg,
             #d8d0c3,
             #9d8d7a);
@@ -394,6 +396,7 @@ nav {
 
 .project:nth-child(2) {
     background:
+        linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
         linear-gradient(135deg,
             #9b8066,
             #493c31);
@@ -401,6 +404,7 @@ nav {
 
 .project:nth-child(3) {
     background:
+        linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
         linear-gradient(135deg,
             #d8b27d,
             #7e5d38);
@@ -408,6 +412,7 @@ nav {
 
 .project:nth-child(4) {
     background:
+        linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
         linear-gradient(135deg,
             #8a8d88,
             #414440);
@@ -489,7 +494,7 @@ nav {
 }
 
 .instagram-cta:hover {
-    color: var(--accent);
+    color: var(--accent-readable);
 
     border-color: var(--accent);
 
@@ -500,7 +505,7 @@ nav {
 }
 
 .instagram-cta:focus-visible {
-    outline: 3px solid rgba(215, 155, 69, .3);
+    outline: 3px solid var(--accent-readable);
     outline-offset: 4px;
 }
 
@@ -556,16 +561,17 @@ textarea {
 
 input::placeholder,
 textarea::placeholder {
-    color: #827d76;
+    color: var(--muted);
+    opacity: 1;
 }
 
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: var(--accent);
+    border-color: var(--accent-readable);
 
     box-shadow:
-        0 0 0 3px rgba(215, 155, 69, .14);
+        0 0 0 3px var(--accent-readable);
 }
 
 textarea {
@@ -604,7 +610,7 @@ textarea {
     padding: 0 18px;
 
     background: #25d366;
-    color: var(--white);
+    color: var(--ink);
 
     border-radius: 999px;
 
@@ -636,8 +642,9 @@ textarea {
 }
 
 .floating:focus-visible {
-    outline: 3px solid rgba(37, 211, 102, .35);
+    outline: 3px solid var(--ink);
     outline-offset: 4px;
+    box-shadow: 0 0 0 4px var(--white);
 }
 
 /* =========================

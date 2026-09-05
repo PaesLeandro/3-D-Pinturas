@@ -1,0 +1,2 @@
+# Adapt to the actual stack. Pin an appropriate maintained base image.
+# Use multi-stage builds where useful and run as a non-root user when supported.
