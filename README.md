@@ -20,7 +20,7 @@ Landing page moderna para pintura residencial e comercial.
 No arquivo `app/page.tsx`, altere:
 - `WHATSAPP` para o número real com DDI + DDD + número, somente dígitos.
 - `INSTAGRAM` para o perfil real.
-- `PRIME PINTURAS` para o nome da empresa.
+- `3 D PINTURAS` para o nome da empresa.
 - Textos, serviços e projetos.
 
 A galeria possui placeholders visuais para que as fotos reais sejam adicionadas posteriormente.
