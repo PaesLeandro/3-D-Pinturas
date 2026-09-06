@@ -17,7 +17,10 @@ const INSTAGRAM =
 const wa = (text: string) =>
   `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
 
-/* Ícone do Instagram */
+/**
+ * Ícone do Instagram criado localmente em SVG.
+ * Evita dependência do ícone Instagram do lucide-react.
+ */
 function InstagramIcon({ size = 18 }: { size?: number }) {
   return (
     <svg
@@ -74,12 +77,14 @@ Mensagem: ${data.get("mensagem") || "Não informado"}`;
             className="brand"
             aria-label="3 D Pinturas - Página inicial"
           >
-            3 D PINTURAS.
+            3 D PINTURAS & REFORMAS.
           </a>
 
           <div className="links">
             <a href="#servicos">Serviços</a>
+
             <a href="#projetos">Projetos</a>
+
             <a href="#contato">Contato</a>
 
             <a
@@ -92,6 +97,7 @@ Mensagem: ${data.get("mensagem") || "Não informado"}`;
               aria-label="Solicitar orçamento pelo WhatsApp"
             >
               <MessageCircle size={18} />
+
               <span>Orçamento</span>
             </a>
           </div>
@@ -100,7 +106,10 @@ Mensagem: ${data.get("mensagem") || "Não informado"}`;
 
       <main>
         {/* HERO */}
-        <section className="hero" id="inicio">
+        <section
+          className="hero"
+          id="inicio"
+        >
           <div className="wrap">
             <div className="eyebrow">
               Pintura residencial & comercial
@@ -126,11 +135,16 @@ Mensagem: ${data.get("mensagem") || "Não informado"}`;
                 rel="noopener noreferrer"
               >
                 <MessageCircle size={19} />
+
                 <span>Solicitar orçamento</span>
               </a>
 
-              <a className="btn secondary" href="#projetos">
+              <a
+                className="btn secondary"
+                href="#projetos"
+              >
                 <span>Ver trabalhos</span>
+
                 <ArrowRight size={18} />
               </a>
             </div>
@@ -138,7 +152,10 @@ Mensagem: ${data.get("mensagem") || "Não informado"}`;
         </section>
 
         {/* SERVIÇOS */}
-        <section className="section" id="servicos">
+        <section
+          className="section"
+          id="servicos"
+        >
           <div className="wrap">
             <div className="eyebrow">
               O que fazemos
@@ -155,7 +172,8 @@ Mensagem: ${data.get("mensagem") || "Não informado"}`;
                 <h3>Pintura residencial</h3>
 
                 <p>
-                  Interiores e fachadas de casas e apartamentos.
+                  Interiores e fachadas de casas e
+                  apartamentos.
                 </p>
               </article>
 
@@ -176,7 +194,8 @@ Mensagem: ${data.get("mensagem") || "Não informado"}`;
                 <h3>Preparação e acabamento</h3>
 
                 <p>
-                  Correções, massa, lixamento e acabamento cuidadoso.
+                  Correções, massa, lixamento e acabamento
+                  cuidadoso.
                 </p>
               </article>
 
@@ -186,7 +205,8 @@ Mensagem: ${data.get("mensagem") || "Não informado"}`;
                 <h3>Texturas e efeitos</h3>
 
                 <p>
-                  Acabamentos decorativos para destacar seus ambientes.
+                  Acabamentos decorativos para destacar seus
+                  ambientes.
                 </p>
               </article>
             </div>
@@ -223,17 +243,20 @@ Mensagem: ${data.get("mensagem") || "Não informado"}`;
                       PROJETO 0{index + 1}
                     </small>
 
-                    <h3>{project}</h3>
+                    <h3>
+                      {project}
+                    </h3>
 
                     <span>
-                      Em breve, fotos reais dos nossos trabalhos.
+                      Em breve, fotos reais dos nossos
+                      trabalhos.
                     </span>
                   </div>
                 </article>
               ))}
             </div>
 
-            {/* CTA INSTAGRAM */}
+            {/* INSTAGRAM DO PORTFÓLIO */}
             <div className="portfolio-instagram">
               <p>
                 Quer acompanhar mais trabalhos e novidades?
@@ -279,8 +302,8 @@ Mensagem: ${data.get("mensagem") || "Não informado"}`;
               </p>
 
               <p className="contact-support">
-                Quanto mais detalhes você informar, melhor poderemos
-                entender o serviço desejado.
+                Quanto mais detalhes você informar, melhor
+                poderemos entender o serviço desejado.
               </p>
             </div>
 
@@ -314,7 +337,10 @@ Mensagem: ${data.get("mensagem") || "Não informado"}`;
                 required
                 defaultValue=""
               >
-                <option value="" disabled>
+                <option
+                  value=""
+                  disabled
+                >
                   Tipo de imóvel
                 </option>
 
@@ -363,7 +389,10 @@ Mensagem: ${data.get("mensagem") || "Não informado"}`;
                 className="btn primary form-submit"
                 type="submit"
               >
-                <span>Enviar pelo WhatsApp</span>
+                <span>
+                  Enviar pelo WhatsApp
+                </span>
+
                 <ArrowRight size={18} />
               </button>
             </form>
@@ -382,19 +411,16 @@ Mensagem: ${data.get("mensagem") || "Não informado"}`;
         aria-label="Solicitar orçamento pelo WhatsApp"
       >
         <MessageCircle size={19} />
+
         <span>WhatsApp</span>
       </a>
 
       {/* FOOTER */}
       <footer>
         <div className="wrap footer-content">
-          <div className="footer-info">
-            <strong>3 D PINTURAS.</strong>
-
-            <span>
-              © 2026 — Residencial & Comercial.
-            </span>
-          </div>
+          <p>
+            © 2026 3 D Pinturas — Residencial & Comercial.
+          </p>
 
           <a
             className="footer-instagram"
