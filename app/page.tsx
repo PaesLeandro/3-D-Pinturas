@@ -1,5 +1,12 @@
 "use client";
 
+import Image from "next/image";
+import pintura from "../assets/pintura.png";
+import efeito from "../assets/efeito.png";
+import forroPvc from "../assets/forropvcmadeira.png";
+import drywall from "../assets/parededrywall.png";
+import pisoLaminado from "../assets/pisolaminado.png";
+
 import {
   MessageCircle,
   ArrowRight,
@@ -10,6 +17,34 @@ import {
 } from "lucide-react";
 
 const WHATSAPP = "5524999274148";
+
+const projects = [
+  {
+    title: "Pintura decorativa",
+    image: pintura,
+    alt: "Parede com acabamento decorativo cinza ao lado de revestimento de tijolinhos",
+  },
+  {
+    title: "Texturas e efeitos",
+    image: efeito,
+    alt: "Paredes com textura bege e acabamento junto aos rodapés brancos",
+  },
+  {
+    title: "Forro de PVC amadeirado",
+    image: forroPvc,
+    alt: "Forro amadeirado com luminárias na fachada de um comércio",
+  },
+  {
+    title: "Parede de drywall",
+    image: drywall,
+    alt: "Ambiente com parede branca decorada com molduras e teto com iluminação linear",
+  },
+  {
+    title: "Piso laminado",
+    image: pisoLaminado,
+    alt: "Piso laminado amadeirado instalado em sala e corredor com paredes brancas",
+  },
+];
 
 const INSTAGRAM =
   "https://www.instagram.com/3dpinturas_tiagoaraujo?stkn=MWd1cmR0bXM1M3dqNw==";
@@ -228,29 +263,27 @@ Mensagem: ${data.get("mensagem") || "Não informado"}`;
             </h2>
 
             <div className="projects">
-              {[
-                "Sala residencial",
-                "Fachada comercial",
-                "Apartamento",
-                "Área externa",
-              ].map((project, index) => (
+              {projects.map((project, index) => (
                 <article
                   className="project"
-                  key={project}
+                  key={project.title}
                 >
+                  <Image
+                    className="project-image"
+                    src={project.image}
+                    alt={project.alt}
+                    sizes="(max-width: 480px) 92vw, (max-width: 800px) 46vw, (max-width: 1260px) 31vw, 375px"
+                    loading="lazy"
+                  />
                   <div className="project-content">
                     <small>
                       PROJETO 0{index + 1}
                     </small>
 
                     <h3>
-                      {project}
+                      {project.title}
                     </h3>
 
-                    <span>
-                      Em breve, fotos reais dos nossos
-                      trabalhos.
-                    </span>
                   </div>
                 </article>
               ))}
